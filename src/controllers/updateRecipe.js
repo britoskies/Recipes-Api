@@ -7,17 +7,17 @@ module.exports = {
     updateRecipe: (req, res) => {   
         const fileReader = fs.readFileSync(jsonPath);
         const data = JSON.parse(fileReader);
-        const nameFromBody = req.body.name;
+        const nameFromParams = req.params.name;
 
-        if (data.recipes.map(r => r.name).includes(nameFromBody)) {
+        if (data.recipes.map(r => r.name).includes(nameFromParams)) {
             const newRecipe = {
-                name: nameFromBody,
+                name: nameFromParams,
                 ingredients: req.body.ingredients,
                 instructions: req.body.instructions
             }
 
             // Finding recipe and replacing it
-            const recipeToUpdate = data.recipes.indexOf(nameFromBody);
+            const recipeToUpdate = data.recipes.indexOf(nameFromParams);
             data.recipes.splice(recipeToUpdate, 1, newRecipe);
             let formattedData = JSON.stringify(data);
 

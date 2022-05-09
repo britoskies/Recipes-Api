@@ -31,7 +31,7 @@ In the project directory, you can run:
 ``` npm run dev ```
 
 To test the server side / API: <br>
-Personal recommendation is using Postman, Thunder Client or any REST Client to test all of the requests. <br>
+Personal recommendation is using Postman, Thunder Client or any REST Client to test all endpoints. <br>
 
 Test route [http://localhost:3000/recipes](http://localhost:3000/recipes) as a GET request to obtain all recipes. <br>
 
@@ -56,7 +56,7 @@ Add this line of code in the body: <br>
 
 ```
 
-Test route [http://localhost:3000/recipes](http://localhost:3000/recipes) as a PUT request to update the entire content of a recipe. <br>
+Test route [http://localhost:3000/recipes/butteredBagel](http://localhost:3000/recipes/butteredBagel) as a PUT request to update the entire content of a recipe. <br>
 
 Add this line of code in the body: <br>
 
@@ -75,16 +75,7 @@ Add this line of code in the body: <br>
 
 ```
 
-Test route [http://localhost:3000/recipes](http://localhost:3000/recipes) as a DELETE request to delete one recipe. <br>
-
-Add this line of code in the body: <br>
-
-```
-{
-	"name": "butteredBagel"
-}
-
-```
+Test route [http://localhost:3000/recipes/butteredBagel](http://localhost:3000/recipes/butteredBagel) as a DELETE request to delete one recipe. <br>
 
 <br>
 

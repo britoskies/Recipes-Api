@@ -7,11 +7,11 @@ module.exports = {
     deleteRecipe: (req, res) => {
         const fileReader = fs.readFileSync(jsonPath);
         const data = JSON.parse(fileReader);
-        const nameFromBody = req.body.name;
+        const nameFromParams = req.params.name;
 
-        if (data.recipes.map(r => r.name).includes(nameFromBody)) {
+        if (data.recipes.map(r => r.name).includes(nameFromParams)) {
             // Finding recipe and deleting it
-            const recipeToDelete = data.recipes.indexOf(nameFromBody);
+            const recipeToDelete = data.recipes.indexOf(nameFromParams);
             data.recipes.splice(recipeToDelete, 1);
             let formattedData = JSON.stringify(data);
 

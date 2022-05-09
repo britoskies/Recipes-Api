@@ -17,9 +17,9 @@ router.get("/recipes", getAllRecipes);
 router.post("/recipes", createRecipe);
 
 // Update All About One Recipe
-router.put("/recipes", updateRecipe);
+router.put("/recipes/:name", updateRecipe);
 
 // Delete One
-router.delete("/recipes", deleteRecipe)
+router.delete("/recipes/:name", deleteRecipe)
 
 module.exports = router;
